@@ -25,8 +25,11 @@ Database: Oracle Database (JDBC, Sequence + Trigger for ID increment)
 Server: Apache Tomcat
 
 Database Set
+
 #CREATING TABLE AND ITS FEATURES
+
 Create Table
+
 1.CREATE TABLE accounts (
     id NUMBER PRIMARY KEY,
     first_name VARCHAR2(50),
@@ -54,7 +57,9 @@ BEGIN
    END IF;
 END;
 
+
 EX:Insert Sample Data
+
 INSERT INTO accounts 
 (first_name, last_name, email, password, mobile, dob, account_type) 
 VALUES ('Vamsi', 'Andavarapu', 'test@gmail.com', '1234', '9876543210', DATE '2002-01-01', 'Savings');
