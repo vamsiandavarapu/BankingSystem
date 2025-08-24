@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vamsi's International Bank - Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/originals/72/c0/55/72c05566763a3d799eae1928879e6f78.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        
+            background-attachment: fixed;
+            
+            color: white;
+            
+        }
+        header {
+            background-color: rgba(31, 40, 51, 1);
+            color: rgba(102, 252, 241, 0.8);
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            padding: 10px;
+            background-color: rgba(11, 12, 16, 1);
+        }
+        nav a {
+            display: inline-block;
+            margin: 5px;
+            padding: 12px 50px;
+            font-size: 10px;
+            font-weight: bold;
+            text-decoration: none;
+            color: rgba(102, 252, 241, 0.9);
+            background-color: rgba(31,40,51,0.9);
+            border: 2px solid rgba(102,252,241,0.6);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: white;
+        }
+        aside {
+            background-color: rgba(11,12,16,1);
+            width: 6%;
+            height: 200%;
+            position: fixed;
+            padding-top: 20px;
+        }
+        aside a {
+            padding: 10px 15px;
+            text-decoration: none;
+           
+            color: rgba(102,252,241,0.8);
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            position: fixed;
+            background-color: rgba(11,12,16,1);
+        }
+        .content {
+            margin-left: 8%;
+            padding: 20px;
+            text-align: center;
+        }
+        input[type=text], input[type=password] {
+            padding: 8px;
+            width: 250px;
+            border-radius: 4px;
+            border: none;
+            margin: 5px;
+        }
+        input[type=submit] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: rgba(102,252,241,0.8);
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Vamsi's International Bank</h1></header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Services.html">Services</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="createaccount.html">Apply for Account</a>
+    </nav>
+    <aside>
+        <a href="Donations.html">Donations</a><br>
+        <a href="Loans.html">Loans</a>
+    </aside>
+    <div class="content">
+        <h2>Login to Your Account</h2>
+        <form action="ShowDetails" method="post">
+            Email: <input type="text" name="email" required><br>
+            Password: <input type="password" name="password" required><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <footer>
+        <p>Contact us: <a href="mailto:BankManager@gmail.com">BankManager@gmail.com</a> / +91 8309639943</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Vamsi's International Bank</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1b2a;
+      color: #e0e1dd;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px;
+      color: #00d4ff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+    }
+  </style>
+</head>
+<body>
+  <h1>Bank Gallery</h1>
+  <div class="gallery">
+    <img src="images/bakn5.png" alt="Bank Branch">
+  <img src="images/bank1.png" alt="Customer Service">
+  <img src="images/bank4.png" alt="Digital Banking">
+  <img src="images/bank3.png" alt="Team Meeting">
+  </div>
+</body>
+</html>
