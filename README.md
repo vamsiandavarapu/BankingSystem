@@ -24,9 +24,10 @@ Database: Oracle Database (JDBC, Sequence + Trigger for ID increment)
 
 Server: Apache Tomcat
 
-Database Setup
+Database Set
+#CREATING TABLE AND ITS FEATURES
 Create Table
-CREATE TABLE accounts (
+1.CREATE TABLE accounts (
     id NUMBER PRIMARY KEY,
     first_name VARCHAR2(50),
     last_name VARCHAR2(50),
@@ -38,12 +39,12 @@ CREATE TABLE accounts (
     created_at DATE DEFAULT SYSDATE
 );
 
-Create Sequence
+2.Create Sequence
 CREATE SEQUENCE account_seq 
 START WITH 1 
 INCREMENT BY 1;
 
-Create Trigger for Auto-Increment ID
+3.Create Trigger for Auto-Increment ID
 CREATE OR REPLACE TRIGGER account_trigger
 BEFORE INSERT ON accounts
 FOR EACH ROW
@@ -53,27 +54,27 @@ BEGIN
    END IF;
 END;
 
-Insert Sample Data
+EX:Insert Sample Data
 INSERT INTO accounts 
 (first_name, last_name, email, password, mobile, dob, account_type) 
 VALUES ('Vamsi', 'Andavarapu', 'test@gmail.com', '1234', '9876543210', DATE '2002-01-01', 'Savings');
 
 How It Works
 
-User opens the Login Page (login.html).
+1.User opens the Login Page (login.html).
 
-On login, request goes to LoginServlet which verifies credentials from the database.
+2.On login, request goes to LoginServlet which verifies credentials from the database.
 
-If valid, user details are displayed.
+3.If valid, user details are displayed.
 
-Users can also delete their account using the DeleteAccount servlet.
+4.Users can also delete their account using the DeleteAccount servlet.
 
-When a new account is created, account_seq and account_trigger ensure that the id field is auto-generated.
+5.When a new account is created, account_seq and account_trigger ensure that the id field is auto-generated.
 
 Setup Instructions
 
-Install Apache Tomcat (or any servlet container).
+1.Install Apache Tomcat (or any servlet container).
 
-Configure Oracle JDBC connection in your servlet code.
+2.Configure Oracle JDBC connection in your servlet code.
 
-Deploy the project on Tomcat (webapps folder).
+3.Deploy the project on Tomcat (webapps folder).
